@@ -59,7 +59,7 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "VladislavSevruk_TypeResolver"
+        property "sonar.projectKey", "VladislavSevruk_StringRepresentationTypeResolver"
     }
 }
 
