@@ -30,7 +30,7 @@ import com.github.vladislavsevruk.resolver.resolver.picker.TypeResolverPicker;
  */
 public abstract class AbstractParameterizedStringRepresentationResolver extends AbstractParameterizedTypeResolver<String> {
 
-    public AbstractParameterizedStringRepresentationResolver(TypeResolverPicker<String> typeResolverPicker) {
+    protected AbstractParameterizedStringRepresentationResolver(TypeResolverPicker<String> typeResolverPicker) {
         super(typeResolverPicker);
     }
 
