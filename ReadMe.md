@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/VladislavSevruk/TypeStringRepresentationResolver.svg?branch=develop)](https://travis-ci.com/VladislavSevruk/TypeStringRepresentationResolver)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_TypeStringRepresentationResolver&metric=alert_status)](https://sonarcloud.io/dashboard?id=VladislavSevruk_TypeStringRepresentationResolver)
-[![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_TypeStringRepresentationResolver&metric=coverage)](https://sonarcloud.io/component_measures?id=VladislavSevruk_TypeStringRepresentationResolver&metric=coverage)
+[![Build Status](https://travis-ci.org/VladislavSevruk/StringRepresentationTypeResolver.svg?branch=develop)](https://travis-ci.com/VladislavSevruk/StringRepresentationTypeResolver)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_StringRepresentationTypeResolver&metric=alert_status)](https://sonarcloud.io/dashboard?id=VladislavSevruk_StringRepresentationTypeResolver)
+[![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_StringRepresentationTypeResolver&metric=coverage)](https://sonarcloud.io/component_measures?id=VladislavSevruk_StringRepresentationTypeResolver&metric=coverage)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.vladislavsevruk/type-string-representation-resolver/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.vladislavsevruk/type-string-representation-resolver)
 
 # Java Type String Representation Resolver
