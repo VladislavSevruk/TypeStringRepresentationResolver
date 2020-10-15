@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/VladislavSevruk/StringRepresentationTypeResolver.svg?branch=develop)](https://travis-ci.com/VladislavSevruk/StringRepresentationTypeResolver)
+[![Build Status](https://travis-ci.org/VladislavSevruk/StringRepresentationTypeResolver.svg?branch=master)](https://travis-ci.com/VladislavSevruk/StringRepresentationTypeResolver)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_StringRepresentationTypeResolver&metric=alert_status)](https://sonarcloud.io/dashboard?id=VladislavSevruk_StringRepresentationTypeResolver)
 [![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=VladislavSevruk_StringRepresentationTypeResolver&metric=coverage)](https://sonarcloud.io/component_measures?id=VladislavSevruk_StringRepresentationTypeResolver&metric=coverage)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.vladislavsevruk/type-string-representation-resolver/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.vladislavsevruk/type-string-representation-resolver)
