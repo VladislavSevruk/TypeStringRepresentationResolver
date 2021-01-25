@@ -41,10 +41,10 @@ public abstract class AbstractAnnotatedParameterizedTypeStringRepresentationReso
         return new String[length];
     }
 
+    protected abstract String createResolvedItem(Class<?> rawType);
+
     @Override
     protected String createResolvedParameterizedType(Class<?> rawType, String[] resolvedArgumentTypes) {
         return String.format("%s<%s>", createResolvedItem(rawType), String.join(", ", resolvedArgumentTypes));
     }
-
-    protected abstract String createResolvedItem(Class<?> rawType);
 }
