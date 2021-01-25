@@ -95,7 +95,8 @@ public final class StringRepresentationResolvingContextManager {
     }
 
     private static ResolvingContext<String> newContext() {
-        return new StringRepresentationResolvingContext(StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage(),
+        return new StringRepresentationResolvingContext(
+                StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage(),
                 StringRepresentationResolvingModuleFactory.typeResolverPicker(),
                 StringRepresentationResolvingModuleFactory.typeResolverStorage(),
                 StringRepresentationResolvingModuleFactory.typeVariableMapper());

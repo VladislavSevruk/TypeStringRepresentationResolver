@@ -75,13 +75,13 @@ class StringRepresentationResolvingModuleFactoryTest {
         ResolvingModuleFactoryMethod<String, MappedVariableHierarchyStorage<String>> factoryMethod
                 = context -> mappedVariableHierarchyStorage;
         StringRepresentationResolvingModuleFactory.replaceMappedVariableHierarchyStorage(factoryMethod);
-        Assertions.assertEquals(factoryMethod, StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage());
+        Assertions.assertEquals(factoryMethod,
+                StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage());
     }
 
     @Test
     void replaceTypeResolverPickerTest() {
-        ResolvingModuleFactoryMethod<String, TypeResolverPicker<String>> factoryMethod
-                = context -> typeResolverPicker;
+        ResolvingModuleFactoryMethod<String, TypeResolverPicker<String>> factoryMethod = context -> typeResolverPicker;
         StringRepresentationResolvingModuleFactory.replaceTypeResolverPicker(factoryMethod);
         Assertions.assertEquals(factoryMethod, StringRepresentationResolvingModuleFactory.typeResolverPicker());
     }
@@ -96,8 +96,7 @@ class StringRepresentationResolvingModuleFactoryTest {
 
     @Test
     void replaceTypeVariableMapperTest() {
-        ResolvingModuleFactoryMethod<String, TypeVariableMapper<String>> factoryMethod
-                = context -> typeVariableMapper;
+        ResolvingModuleFactoryMethod<String, TypeVariableMapper<String>> factoryMethod = context -> typeVariableMapper;
         StringRepresentationResolvingModuleFactory.replaceTypeVariableMapper(factoryMethod);
         Assertions.assertEquals(factoryMethod, StringRepresentationResolvingModuleFactory.typeVariableMapper());
     }
