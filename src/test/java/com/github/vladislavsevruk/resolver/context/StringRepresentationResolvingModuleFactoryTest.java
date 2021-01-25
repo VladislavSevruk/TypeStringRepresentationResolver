@@ -75,7 +75,8 @@ class StringRepresentationResolvingModuleFactoryTest {
         ResolvingModuleFactoryMethod<String, MappedVariableHierarchyStorage<String>> factoryMethod
                 = context -> mappedVariableHierarchyStorage;
         StringRepresentationResolvingModuleFactory.replaceMappedVariableHierarchyStorage(factoryMethod);
-        Assertions.assertEquals(factoryMethod, StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage());
+        Assertions.assertEquals(factoryMethod,
+                StringRepresentationResolvingModuleFactory.mappedVariableHierarchyStorage());
     }
 
     @Test
