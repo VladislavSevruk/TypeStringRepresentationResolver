@@ -244,40 +244,6 @@ class FieldStringRepresentationResolverTest {
     }
 
     @Test
-    void getParameterizedFieldTypeSeveralInnerParameterTypesClassTest() throws NoSuchFieldException {
-        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
-        String result = fieldTypeResolver.resolveField(TestModel.class, field);
-        String expectedRepresentation = String.format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(),
-                TestModel.class.getTypeParameters()[1].getName(), List.class.getName(),
-                TestModel.class.getTypeParameters()[0].getName());
-        Assertions.assertEquals(expectedRepresentation, result);
-    }
-
-    @Test
-    void getParameterizedFieldTypeSeveralInnerParameterTypesTypeMetaTest() throws NoSuchFieldException {
-        TypeMeta<?> innerTypeMeta1 = new TypeMeta<>(Short.class);
-        TypeMeta<?> innerTypeMeta2 = new TypeMeta<>(Byte.class);
-        TypeMeta<?> typeMeta = new TypeMeta<>(TestModel.class, new TypeMeta<?>[]{ innerTypeMeta1, innerTypeMeta2 });
-        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
-        String result = fieldTypeResolver.resolveField(typeMeta, field);
-        String expectedRepresentation = String
-                .format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(), Byte.class.getName(),
-                        List.class.getName(), Short.class.getName());
-        Assertions.assertEquals(expectedRepresentation, result);
-    }
-
-    @Test
-    void getParameterizedFieldTypeSeveralInnerParameterTypesTypeProviderTest() throws NoSuchFieldException {
-        TypeProvider<?> typeProvider = new TypeProvider<TestModel<Short, Byte>>() {};
-        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
-        String result = fieldTypeResolver.resolveField(typeProvider, field);
-        String expectedRepresentation = String
-                .format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(), Byte.class.getName(),
-                        List.class.getName(), Short.class.getName());
-        Assertions.assertEquals(expectedRepresentation, result);
-    }
-
-    @Test
     void getParameterizedFieldTypeSeveralInnerParameterTypesClassShortNameTest() throws NoSuchFieldException {
         Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
         String result = shortNameFieldTypeResolver.resolveField(TestModel.class, field);
@@ -285,6 +251,16 @@ class FieldStringRepresentationResolverTest {
                 .format("%s<%s<%s>, %s<%s>>", Map.class.getSimpleName(), Set.class.getSimpleName(),
                         TestModel.class.getTypeParameters()[1].getName(), List.class.getSimpleName(),
                         TestModel.class.getTypeParameters()[0].getName());
+        Assertions.assertEquals(expectedRepresentation, result);
+    }
+
+    @Test
+    void getParameterizedFieldTypeSeveralInnerParameterTypesClassTest() throws NoSuchFieldException {
+        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
+        String result = fieldTypeResolver.resolveField(TestModel.class, field);
+        String expectedRepresentation = String.format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(),
+                TestModel.class.getTypeParameters()[1].getName(), List.class.getName(),
+                TestModel.class.getTypeParameters()[0].getName());
         Assertions.assertEquals(expectedRepresentation, result);
     }
 
@@ -302,6 +278,19 @@ class FieldStringRepresentationResolverTest {
     }
 
     @Test
+    void getParameterizedFieldTypeSeveralInnerParameterTypesTypeMetaTest() throws NoSuchFieldException {
+        TypeMeta<?> innerTypeMeta1 = new TypeMeta<>(Short.class);
+        TypeMeta<?> innerTypeMeta2 = new TypeMeta<>(Byte.class);
+        TypeMeta<?> typeMeta = new TypeMeta<>(TestModel.class, new TypeMeta<?>[]{ innerTypeMeta1, innerTypeMeta2 });
+        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
+        String result = fieldTypeResolver.resolveField(typeMeta, field);
+        String expectedRepresentation = String
+                .format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(), Byte.class.getName(),
+                        List.class.getName(), Short.class.getName());
+        Assertions.assertEquals(expectedRepresentation, result);
+    }
+
+    @Test
     void getParameterizedFieldTypeSeveralInnerParameterTypesTypeProviderShortNameTest() throws NoSuchFieldException {
         TypeProvider<?> typeProvider = new TypeProvider<TestModel<Short, Byte>>() {};
         Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
@@ -309,6 +298,17 @@ class FieldStringRepresentationResolverTest {
         String expectedRepresentation = String
                 .format("%s<%s<%s>, %s<%s>>", Map.class.getSimpleName(), Set.class.getSimpleName(),
                         Byte.class.getSimpleName(), List.class.getSimpleName(), Short.class.getSimpleName());
+        Assertions.assertEquals(expectedRepresentation, result);
+    }
+
+    @Test
+    void getParameterizedFieldTypeSeveralInnerParameterTypesTypeProviderTest() throws NoSuchFieldException {
+        TypeProvider<?> typeProvider = new TypeProvider<TestModel<Short, Byte>>() {};
+        Field field = TestModel.class.getDeclaredField("parameterizedFieldSeveralInnerParameters");
+        String result = fieldTypeResolver.resolveField(typeProvider, field);
+        String expectedRepresentation = String
+                .format("%s<%s<%s>, %s<%s>>", Map.class.getName(), Set.class.getName(), Byte.class.getName(),
+                        List.class.getName(), Short.class.getName());
         Assertions.assertEquals(expectedRepresentation, result);
     }
 

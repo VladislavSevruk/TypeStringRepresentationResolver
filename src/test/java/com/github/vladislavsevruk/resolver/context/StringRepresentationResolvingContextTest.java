@@ -51,39 +51,47 @@ class StringRepresentationResolvingContextTest {
 
     @Test
     void customMappedVariableHierarchyStorageFactoryMethodReturnsNullTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> null, null, null, null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> null, null,
+                null, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customMappedVariableHierarchyStorageTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> mappedVariableHierarchyStorage,
-                null, null, null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(
+                context -> mappedVariableHierarchyStorage, null, null, null);
         Assertions.assertEquals(mappedVariableHierarchyStorage, resolvingContext.getMappedVariableHierarchyStorage());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customModulesFactoryMethodReturnNullTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> null, context -> null,
-                context -> null, context -> null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> null,
+                context -> null, context -> null, context -> null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customModulesTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(context -> mappedVariableHierarchyStorage,
-                context -> typeResolverPicker, context -> typeResolverStorage, context -> typeVariableMapper);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(
+                context -> mappedVariableHierarchyStorage, context -> typeResolverPicker,
+                context -> typeResolverStorage, context -> typeVariableMapper);
         Assertions.assertEquals(mappedVariableHierarchyStorage, resolvingContext.getMappedVariableHierarchyStorage());
         Assertions.assertEquals(typeResolverPicker, resolvingContext.getTypeResolverPicker());
         Assertions.assertEquals(typeResolverStorage, resolvingContext.getTypeResolverStorage());
@@ -92,54 +100,66 @@ class StringRepresentationResolvingContextTest {
 
     @Test
     void customTypeResolverPickerFactoryMethodReturnsNullTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, context -> null, null, null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, context -> null,
+                null, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customTypeResolverPickerTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, context -> typeResolverPicker, null,
-                null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null,
+                context -> typeResolverPicker, null, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
         Assertions.assertEquals(typeResolverPicker, resolvingContext.getTypeResolverPicker());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customTypeResolverStorageFactoryMethodReturnsNullTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null, context -> null, null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null,
+                context -> null, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customTypeResolverStorageTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null, context -> typeResolverStorage,
-                null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null,
+                context -> typeResolverStorage, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(typeResolverStorage, resolvingContext.getTypeResolverStorage());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
     void customTypeVariableMapperFactoryMethodReturnsNullTest() {
-        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null, null, context -> null);
+        ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null, null,
+                context -> null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 
     @Test
@@ -148,7 +168,8 @@ class StringRepresentationResolvingContextTest {
                 context -> typeVariableMapper);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
         Assertions.assertEquals(typeVariableMapper, resolvingContext.getTypeVariableMapper());
     }
@@ -158,8 +179,10 @@ class StringRepresentationResolvingContextTest {
         ResolvingContext<String> resolvingContext = new StringRepresentationResolvingContext(null, null, null, null);
         Assertions.assertEquals(StringRepresentationMappedVariableHierarchyStorage.class,
                 resolvingContext.getMappedVariableHierarchyStorage().getClass());
-        Assertions.assertEquals(StringRepresentationResolverPicker.class, resolvingContext.getTypeResolverPicker().getClass());
+        Assertions.assertEquals(StringRepresentationResolverPicker.class,
+                resolvingContext.getTypeResolverPicker().getClass());
         Assertions.assertEquals(FullNameResolverStorage.class, resolvingContext.getTypeResolverStorage().getClass());
-        Assertions.assertEquals(StringRepresentationVariableMapper.class, resolvingContext.getTypeVariableMapper().getClass());
+        Assertions.assertEquals(StringRepresentationVariableMapper.class,
+                resolvingContext.getTypeVariableMapper().getClass());
     }
 }

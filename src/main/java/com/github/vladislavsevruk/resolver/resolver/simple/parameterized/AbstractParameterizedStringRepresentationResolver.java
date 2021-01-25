@@ -28,7 +28,8 @@ import com.github.vladislavsevruk.resolver.resolver.picker.TypeResolverPicker;
 /**
  * Resolves string representation for parameterized types.
  */
-public abstract class AbstractParameterizedStringRepresentationResolver extends AbstractParameterizedTypeResolver<String> {
+public abstract class AbstractParameterizedStringRepresentationResolver
+        extends AbstractParameterizedTypeResolver<String> {
 
     protected AbstractParameterizedStringRepresentationResolver(TypeResolverPicker<String> typeResolverPicker) {
         super(typeResolverPicker);
@@ -39,10 +40,10 @@ public abstract class AbstractParameterizedStringRepresentationResolver extends 
         return new String[length];
     }
 
+    protected abstract String createResolvedItem(Class<?> rawType);
+
     @Override
     protected String createResolvedParameterizedType(Class<?> rawType, String[] resolvedArgumentTypes) {
         return String.format("%s<%s>", createResolvedItem(rawType), String.join(", ", resolvedArgumentTypes));
     }
-
-    protected abstract String createResolvedItem(Class<?> rawType);
 }
